@@ -24,4 +24,8 @@ public class WarpsManager {
         this.toRemove.put(warp, warp.toRemove);
         plugin.getLogger().info("Warp " + warp.name + " registered!");
     }
+
+    public WarpInstance getPlugin() {
+        return plugin;
+    }
 }
