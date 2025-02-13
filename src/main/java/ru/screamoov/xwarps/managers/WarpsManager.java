@@ -20,6 +20,8 @@ public class WarpsManager {
     }
 
     public void registerWarp(Warp warp) {
-
+        this.warps.add(warp);
+        this.toRemove.put(warp, warp.toRemove);
+        plugin.getLogger().info("Warp " + warp.name + " registered!");
     }
 }

@@ -30,6 +30,14 @@ public final class WarpInstance extends JavaPlugin {
         this.warpStorage.loadWarps(this.warpsManager);
     }
 
+    public IStorage getWarpStorage() {
+        return warpStorage;
+    }
+
+    public WarpsManager getWarpsManager() {
+        return warpsManager;
+    }
+
     @Override
     public void onDisable() {
 
