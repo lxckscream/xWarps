@@ -1,0 +1,4 @@
+name: xWarps
+version: '${project.version}'
+main: ru.screamoov.xwarps.WarpInstance
+api-version: '1.16'
