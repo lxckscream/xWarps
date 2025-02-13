@@ -14,4 +14,8 @@ public class WarpsManager {
         this.plugin = plugin;
         this.warps = new ArrayList<>();
     }
+
+    public void registerWarp(Warp warp) {
+
+    }
 }
