@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface IStorage {
     void loadWarps(WarpsManager warpsManager);
-    void saveWarps(List<Warp> warps);
+    void saveWarps(List<Warp> warps, WarpsManager warpsManager);
 }

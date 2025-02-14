@@ -30,7 +30,7 @@ public class Warp {
             this.config.set("type", type.name());
             this.config.set("location", location);
             try {
-                this.config.save(new File(config.getCurrentPath()));
+                this.config.save(new File("plugins/xWarps/warps/" + name + ".yml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

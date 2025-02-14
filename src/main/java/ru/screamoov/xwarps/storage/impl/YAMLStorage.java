@@ -10,6 +10,7 @@ import ru.screamoov.xwarps.warp.Warp;
 import ru.screamoov.xwarps.warp.WarpType;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,7 +47,14 @@ public class YAMLStorage implements IStorage {
     }
 
     @Override
-    public void saveWarps(List<Warp> warps) {
-
+    public void saveWarps(List<Warp> warps, WarpsManager warpsManager) {
+        warps.forEach(warp -> {
+            warp.config.set("to-remove", warpsManager.toRemove.get(warp));
+            try {
+                warp.config.save(new File("plugins/xWarps/warps/" + warp.name + ".yml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }

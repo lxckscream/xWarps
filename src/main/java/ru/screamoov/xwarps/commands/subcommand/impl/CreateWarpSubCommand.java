@@ -52,12 +52,12 @@ public class CreateWarpSubCommand implements ISubCommand {
                                         true
                                 )
                         );
-                        color(plugin.getConfig().getString("messages.warp-created")
+                        sender.sendMessage(color(plugin.getConfig().getString("messages.warp-created")
                                 .replaceAll("%warp%", warpName)
-                        );
-                    } else color(plugin.getConfig().getString("messages.already-created"));
-                } else color(usage());
-            } else color(plugin.getConfig().getString("messages.no-perms"));
-        } else color(plugin.getConfig().getString("messages.no-player"));
+                        ));
+                    } else sender.sendMessage(color(plugin.getConfig().getString("messages.already-created")));
+                } else sender.sendMessage(color(usage()));
+            } else sender.sendMessage(color(plugin.getConfig().getString("messages.no-perms")));
+        } else sender.sendMessage(color(plugin.getConfig().getString("messages.no-player")));
     }
 }
