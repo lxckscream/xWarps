@@ -2,6 +2,7 @@ package ru.screamoov.xwarps;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.screamoov.xwarps.commands.WarpCommandExecutor;
+import ru.screamoov.xwarps.gui.SelectWarpTypeGui;
 import ru.screamoov.xwarps.managers.WarpsManager;
 import ru.screamoov.xwarps.storage.IStorage;
 import ru.screamoov.xwarps.storage.impl.YAMLStorage;
@@ -10,6 +11,7 @@ public final class WarpInstance extends JavaPlugin {
     private IStorage warpStorage;
     private WarpsManager warpsManager;
     private WarpCommandExecutor warpCommandExecutor;
+    private SelectWarpTypeGui selectWarpTypeGui;
 
     @Override
     public void onEnable() {
@@ -31,6 +33,9 @@ public final class WarpInstance extends JavaPlugin {
 
         this.warpStorage.loadWarps(this.warpsManager);
 
+        this.selectWarpTypeGui = new SelectWarpTypeGui(this);
+
+
         this.warpCommandExecutor = new WarpCommandExecutor(
                 this
         );
@@ -38,6 +43,14 @@ public final class WarpInstance extends JavaPlugin {
         getCommand("warp").setExecutor(
                 this.warpCommandExecutor
         );
+    }
+
+    public SelectWarpTypeGui getSelectWarpTypeGui() {
+        return selectWarpTypeGui;
+    }
+
+    public WarpCommandExecutor getWarpCommandExecutor() {
+        return warpCommandExecutor;
     }
 
     public IStorage getWarpStorage() {

@@ -1,6 +1,7 @@
 package ru.screamoov.xwarps.commands.subcommand.impl;
 
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import ru.screamoov.xwarps.WarpInstance;
 import ru.screamoov.xwarps.commands.subcommand.ISubCommand;
 
@@ -22,6 +23,8 @@ public class ListWarpSubCommand implements ISubCommand {
 
     @Override
     public void execute(String[] args, CommandSender sender, WarpInstance plugin) {
-
+        if (sender instanceof Player) {
+            ((Player) sender).openInventory(plugin.getSelectWarpTypeGui().inventory);
+        }
     }
 }
