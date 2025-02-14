@@ -19,14 +19,14 @@ guis:
     size: 27
     player-warps:
       icon: DIAMOND_SWORD
-      slot: 12
+      slot: 14
       display-name: "&6&lВарпы игроков"
       lore:
         - "&f"
         - "&c&mНажмите&7, для перехода к списку варпов"
     server-warps:
       icon: COMMAND_BLOCK
-      slot: 15
+      slot: 11
       display-name: "&6&lВарпы сервера"
       lore:
         - "&f"

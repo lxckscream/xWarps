@@ -13,3 +13,37 @@ messages:
   teleported: "&a&lВы успешно телепортированы на варп!"
   big-name: "&c&lНазвание варпа не может превышать &6&l16 символов&c&l!"
 
+guis:
+  select-warp-type:
+    title: "&0Выбор типа варпов:"
+    size: 27
+    player-warps:
+      icon: DIAMOND_SWORD
+      slot: 12
+      display-name: "&6&lВарпы игроков"
+      lore:
+        - "&f"
+        - "&c&mНажмите&7, для перехода к списку варпов"
+    server-warps:
+      icon: COMMAND_BLOCK
+      slot: 15
+      display-name: "&6&lВарпы сервера"
+      lore:
+        - "&f"
+        - "&c&mНажмите&7, для перехода к списку варпов"
+    decoration:
+      icon: ORANGE_STAINED_GLASS_PANE
+      slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+      display-name: "&8 "
+      lore:
+        - "&8  Просто декорация..  "
+        - "&8"

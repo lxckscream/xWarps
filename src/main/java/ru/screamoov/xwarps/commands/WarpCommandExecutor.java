@@ -9,6 +9,7 @@ import org.bukkit.plugin.Plugin;
 import ru.screamoov.xwarps.WarpInstance;
 import ru.screamoov.xwarps.commands.subcommand.ISubCommand;
 import ru.screamoov.xwarps.commands.subcommand.impl.CreateWarpSubCommand;
+import ru.screamoov.xwarps.commands.subcommand.impl.ListWarpSubCommand;
 import ru.screamoov.xwarps.warp.Warp;
 
 import java.util.ArrayList;
@@ -26,7 +27,8 @@ public class WarpCommandExecutor implements CommandExecutor {
         this.plugin = plugin;
         subCommands.addAll(
                 Arrays.asList(
-                        new CreateWarpSubCommand()
+                        new CreateWarpSubCommand(),
+                        new ListWarpSubCommand()
                 )
         );
     }
