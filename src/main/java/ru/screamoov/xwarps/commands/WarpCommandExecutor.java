@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import ru.screamoov.xwarps.WarpInstance;
 import ru.screamoov.xwarps.commands.subcommand.ISubCommand;
+import ru.screamoov.xwarps.commands.subcommand.impl.CreateServerWarpSubCommand;
 import ru.screamoov.xwarps.commands.subcommand.impl.CreateWarpSubCommand;
 import ru.screamoov.xwarps.commands.subcommand.impl.ListWarpSubCommand;
 import ru.screamoov.xwarps.warp.Warp;
@@ -28,7 +29,8 @@ public class WarpCommandExecutor implements CommandExecutor {
         subCommands.addAll(
                 Arrays.asList(
                         new CreateWarpSubCommand(),
-                        new ListWarpSubCommand()
+                        new ListWarpSubCommand(),
+                        new CreateServerWarpSubCommand()
                 )
         );
     }

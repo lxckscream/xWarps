@@ -64,6 +64,24 @@ public class WarpsManager {
         return null;
     }
 
+    public List<Warp> getPlayerWarps() {
+        List<Warp> warpsList = new ArrayList<>();
+        warps.forEach(warp -> {
+            if (warp.type == WarpType.CUSTOM) warpsList.add(warp);
+        });
+
+        return warpsList;
+    }
+
+    public List<Warp> getServerWarps() {
+        List<Warp> warpsList = new ArrayList<>();
+        warps.forEach(warp -> {
+            if (warp.type == WarpType.SERVER) warpsList.add(warp);
+        });
+
+        return warpsList;
+    }
+
     public void removeWarp(Warp warp) {
         warps.remove(warp);
         toRemove.remove(warp);
