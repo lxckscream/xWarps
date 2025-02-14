@@ -2,10 +2,13 @@ package ru.screamoov.xwarps.warp;
 
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
 import java.io.IOException;
+
+import static ru.screamoov.xwarps.utils.Hex.color;
 
 public class Warp {
     public String name;
@@ -35,5 +38,9 @@ public class Warp {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public void teleport(Player player) {
+        player.teleport(this.location);
     }
 }

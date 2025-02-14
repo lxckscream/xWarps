@@ -50,6 +50,6 @@ public final class WarpInstance extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        warpStorage.saveWarps(warpsManager.warps);
+        warpStorage.saveWarps(warpsManager.warps, this.warpsManager);
     }
 }

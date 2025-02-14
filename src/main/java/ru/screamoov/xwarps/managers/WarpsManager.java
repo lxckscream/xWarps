@@ -23,16 +23,18 @@ public class WarpsManager {
         new BukkitRunnable(){
             @Override
             public void run() {
-                toRemove.keySet().forEach(warp->{
-                    if (warp.type!= WarpType.SERVER) { // Игнорируем варпы, поставленные администрацией
-                        long toRemove = WarpsManager.this.toRemove.get(warp);
-                        if (toRemove >= 1) {
-                            WarpsManager.this.toRemove.put(warp, toRemove - 1);
-                        } else {
-                            removeWarp(warp);
+                if (!toRemove.isEmpty()) {
+                    toRemove.keySet().forEach(warp -> {
+                        if (warp.type != WarpType.SERVER) { // Игнорируем варпы, поставленные администрацией
+                            long toRemove = WarpsManager.this.toRemove.get(warp);
+                            if (toRemove >= 1) {
+                                WarpsManager.this.toRemove.put(warp, toRemove - 1);
+                            } else {
+                                removeWarp(warp);
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         }.runTaskTimerAsynchronously(plugin, 20, 20);
     }

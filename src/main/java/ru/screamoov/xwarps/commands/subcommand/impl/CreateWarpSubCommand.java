@@ -22,7 +22,7 @@ public class CreateWarpSubCommand implements ISubCommand {
 
     @Override
     public String usage() {
-        return "&cИспользование: /warp create <name>";
+        return "&c/warp create <название>";
     }
 
     @Override

@@ -3,6 +3,7 @@ storage:
 
 settings:
   to-remove: 20
+  max-name-length: 16
 
 messages:
   no-player: "&c&lЭта команда доступна только игрокам!"
