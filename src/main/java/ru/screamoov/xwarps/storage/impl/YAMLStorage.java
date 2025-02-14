@@ -32,7 +32,8 @@ public class YAMLStorage implements IStorage {
                                                 config.getString("type").toUpperCase()
                                         ),
                                         config.getLocation("location"),
-                                        config
+                                        config,
+                                        false
                                 )
                         );
                     } catch (Exception e) {

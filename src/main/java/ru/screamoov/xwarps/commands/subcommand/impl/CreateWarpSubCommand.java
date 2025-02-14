@@ -48,7 +48,8 @@ public class CreateWarpSubCommand implements ISubCommand {
                                         plugin.getConfig().getLong("settings.to-remove"),
                                         WarpType.CUSTOM,
                                         ((Player) sender).getLocation(),
-                                        YamlConfiguration.loadConfiguration(file)
+                                        YamlConfiguration.loadConfiguration(file),
+                                        true
                                 )
                         );
                         color(plugin.getConfig().getString("messages.warp-created")
