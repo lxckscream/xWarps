@@ -12,6 +12,8 @@ messages:
   already-created: "&c&lВарп с таким названием уже существует!"
   teleported: "&a&lВы успешно телепортированы на варп!"
   big-name: "&c&lНазвание варпа не может превышать &6&l16 символов&c&l!"
+  warp-removed: "&a&lВы успешно удалили варп!"
+  no-your-warp: "&c&lЭтот варп не принаджелит вам!"
 
 guis:
   select-warp-type:
