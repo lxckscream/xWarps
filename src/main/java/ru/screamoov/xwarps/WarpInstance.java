@@ -31,10 +31,12 @@ public final class WarpInstance extends JavaPlugin {
 
         this.warpStorage.loadWarps(this.warpsManager);
 
+        this.warpCommandExecutor = new WarpCommandExecutor(
+                this
+        );
+
         getCommand("warp").setExecutor(
-                new WarpCommandExecutor(
-                        this
-                )
+                this.warpCommandExecutor
         );
     }
 
