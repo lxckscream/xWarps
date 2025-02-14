@@ -46,7 +46,10 @@ public class WarpCommandExecutor implements CommandExecutor {
             String name = strings[0];
             for (Warp warp : plugin.getWarpsManager().warps) {
                 if (warp.name.equals(name)) {
-                    if (commandSender instanceof Player) warp.teleport((Player) commandSender);
+                    if (commandSender instanceof Player) {
+                        warp.teleport((Player) commandSender);
+                        commandSender.sendMessage(color(plugin.getConfig().getString("messages.teleported")));
+                    }
                     else commandSender.sendMessage(color(plugin.getConfig().getString("messages.no-player")));
                     return true;
                 }
