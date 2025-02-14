@@ -9,6 +9,7 @@ import ru.screamoov.xwarps.storage.impl.YAMLStorage;
 public final class WarpInstance extends JavaPlugin {
     private IStorage warpStorage;
     private WarpsManager warpsManager;
+    private WarpCommandExecutor warpCommandExecutor;
 
     @Override
     public void onEnable() {
