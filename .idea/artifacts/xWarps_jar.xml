@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="xWarps:jar">
+    <output-path>$USER_HOME$/Desktop/test/plugins</output-path>
+    <root id="archive" name="xWarps.jar">
+      <element id="module-output" name="xWarps" />
+    </root>
+  </artifact>
+</component>

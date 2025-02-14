@@ -1,0 +1,6 @@
+name: xWarps
+version: '1.0-SNAPSHOT'
+main: ru.screamoov.xwarps.WarpInstance
+api-version: '1.16'
+commands:
+  warp:

@@ -31,6 +31,7 @@ public class YAMLStorage implements IStorage {
                                         WarpType.valueOf(
                                                 config.getString("type").toUpperCase()
                                         ),
+                                        config.getLocation("location"),
                                         config
                                 )
                         );
