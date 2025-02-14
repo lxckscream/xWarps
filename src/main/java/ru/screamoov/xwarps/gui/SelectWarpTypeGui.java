@@ -68,6 +68,8 @@ public class SelectWarpTypeGui implements Listener {
             ItemStack clicked = event.getCurrentItem();
             if (clicked.isSimilar(playerWarps)) {
                 plugin.getPlayerWarpsPageGui().openWarpsInventory((Player) event.getWhoClicked(), 0);
+            } else if (clicked.isSimilar(serverWarps)) {
+                plugin.getServerWarpsPageGui().openWarpsInventory((Player) event.getWhoClicked(), 0);
             }
         }
     }

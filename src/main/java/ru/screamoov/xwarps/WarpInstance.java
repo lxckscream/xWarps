@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ru.screamoov.xwarps.commands.WarpCommandExecutor;
 import ru.screamoov.xwarps.gui.PlayerWarpsPageGui;
 import ru.screamoov.xwarps.gui.SelectWarpTypeGui;
+import ru.screamoov.xwarps.gui.ServerWarpsPageGui;
 import ru.screamoov.xwarps.managers.WarpsManager;
 import ru.screamoov.xwarps.storage.IStorage;
 import ru.screamoov.xwarps.storage.impl.YAMLStorage;
@@ -14,6 +15,7 @@ public final class WarpInstance extends JavaPlugin {
     private WarpCommandExecutor warpCommandExecutor;
     private SelectWarpTypeGui selectWarpTypeGui;
     private PlayerWarpsPageGui playerWarpsPageGui;
+    private ServerWarpsPageGui serverWarpsPageGui;
 
     @Override
     public void onEnable() {
@@ -37,6 +39,7 @@ public final class WarpInstance extends JavaPlugin {
 
         this.selectWarpTypeGui = new SelectWarpTypeGui(this);
         this.playerWarpsPageGui = new PlayerWarpsPageGui(this);
+        this.serverWarpsPageGui = new ServerWarpsPageGui(this);
 
         this.warpCommandExecutor = new WarpCommandExecutor(
                 this
@@ -45,6 +48,10 @@ public final class WarpInstance extends JavaPlugin {
         getCommand("warp").setExecutor(
                 this.warpCommandExecutor
         );
+    }
+
+    public ServerWarpsPageGui getServerWarpsPageGui() {
+        return serverWarpsPageGui;
     }
 
     public PlayerWarpsPageGui getPlayerWarpsPageGui() {

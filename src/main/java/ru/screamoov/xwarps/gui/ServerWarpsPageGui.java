@@ -82,7 +82,7 @@ public class ServerWarpsPageGui implements Listener {
             event.setCancelled(true);
 
             Player player = (Player) event.getWhoClicked();
-            int page = Integer.parseInt(event.getView().getTitle().replace(ChatColor.GREEN + "Варпы сервера - Страница ", "")) - 1;
+            int page = Integer.parseInt(event.getView().getTitle().replace(ChatColor.GRAY + "Варпы сервера - Страница ", "")) - 1;
 
             if (event.getSlot() == NEXT_PAGE_SLOT) {
                 List<Warp> warps = plugin.getWarpsManager().getServerWarps();
