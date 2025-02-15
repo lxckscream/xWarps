@@ -14,6 +14,7 @@ messages:
   big-name: "&c&lНазвание варпа не может превышать &6&l16 символов&c&l!"
   warp-removed: "&a&lВы успешно удалили варп!"
   no-your-warp: "&c&lЭтот варп не принаджелит вам!"
+  warp-not-found: "&c&lВарп не найден"
 
 guis:
   select-warp-type:

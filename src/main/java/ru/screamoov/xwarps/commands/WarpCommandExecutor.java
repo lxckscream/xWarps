@@ -46,6 +46,13 @@ public class WarpCommandExecutor implements CommandExecutor {
             return true;
         }
 
+        for (ISubCommand subCommand : subCommands) {
+            if (strings[0].equals(subCommand.name())) {
+                subCommand.execute(strings, commandSender, this.plugin);
+                return true;
+            }
+        }
+
         if (strings.length == 1) {
             String name = strings[0];
             for (Warp warp : plugin.getWarpsManager().warps) {
@@ -58,13 +65,8 @@ public class WarpCommandExecutor implements CommandExecutor {
                     return true;
                 }
             }
+            commandSender.sendMessage(color(plugin.getConfig().getString("messages.warp-not-found")));
         }
-
-        subCommands.forEach(subCommand->{
-            if (strings[0].equals(subCommand.name())) {
-                subCommand.execute(strings, commandSender, this.plugin);
-            }
-        });
         return true;
     }
 }
